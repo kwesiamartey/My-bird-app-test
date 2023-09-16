@@ -12,6 +12,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import io.kamel.image.KamelImage
+import io.kamel.image.asyncPainterResource
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 
@@ -29,8 +31,8 @@ fun App() {
                 Text(greetingText)
             }
             AnimatedVisibility(showImage) {
-                Image(
-                    painterResource("compose-multiplatform.xml"),
+                KamelImage(
+                    asyncPainterResource("https://lh3.googleusercontent.com/XEReM_ffJkSCGE8mA8E6a7bpVjT7pNtOeQa0YhmQX6bR4lJycUESqNFCfIj8PTUbjg"),
                     null
                 )
             }
